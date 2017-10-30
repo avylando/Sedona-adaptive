@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Photos</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
+  <header class="page-header">
+
+    <div class="container">
+      <div class="page-header__wrapper">
+        <div class="page-header__title">
+          <div class="page-header__logo">
+            <svg class="page-header__logo-icon">
+              <use xlink:href=""></use>
+            </svg>
+          </div>
+          <button class="page-header__toggle" type="button"></button>
+          <svg class="page-header__cross-icon">
+            <use xlink:href=""></use>
+          </svg>
+          <svg class="page-header__burger-icon">
+            <use xlink:href=""></use>
+          </svg>
+        </div>
+        <nav class="page-header__nav page-header__nav--left">
+          <ul class="page-header__menu">
+            <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Главная</a></li>
+            <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Фото и видео</a></li>
+          </ul>
+        </nav>
+        <nav class="page-header__nav page-header__nav--right">
+          <ul class="page-header__menu">
+            <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Форма отзыва</a></li>
+            <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">HTML Academy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="head-block">
+      <img class="head-block__caption" src="img/.svg">
+      <div class="container">
+        <div class="head-block__greeting">
+          <h1 class="head-block__title"></h1>
+          <p class="head-block__text"></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <section class="album">
+
+        <article class="photo-block photo-block--main">
+          <img class="photo-block__image" src="img/.jpg">
+          <div class="photo-block__subtitle">
+            <div class="photo-block__decsription">
+              <h2 class="photo-block__title"></h2>
+              <p class="photo-block__text"></p>
+            </div>
+            <div class="photo-block__likes">
+              <svg class="photo-block__like-icon">
+                <use xlink:href="#"></use>
+              </svg>
+              <p class="photo-block__like-counter"></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="photo-block">
+          <img class="photo-block__image" src="img/.jpg">
+          <div class="photo-block__subtitle">
+            <div class="photo-block__decsription">
+              <h2 class="photo-block__title"></h2>
+              <p class="photo-block__text"></p>
+            </div>
+            <div class="photo-block__likes">
+              <svg class="photo-block__like-icon">
+                <use xlink:href="#"></use>
+              </svg>
+              <p class="photo-block__like-counter"></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="photo-block">
+          <img class="photo-block__image" src="img/.jpg">
+          <div class="photo-block__subtitle">
+            <div class="photo-block__decsription">
+              <h2 class="photo-block__title"></h2>
+              <p class="photo-block__text"></p>
+            </div>
+            <div class="photo-block__likes">
+              <svg class="photo-block__like-icon">
+                <use xlink:href="#"></use>
+              </svg>
+              <p class="photo-block__like-counter"></p>
+            </div>
+          </div>
+        </article>
+
+        <article class="photo-block">
+          <img class="photo-block__image" src="img/.jpg">
+          <div class="photo-block__subtitle">
+            <div class="photo-block__decsription">
+              <h2 class="photo-block__title"></h2>
+              <p class="photo-block__text"></p>
+            </div>
+            <div class="photo-block__likes">
+              <svg class="photo-block__like-icon">
+                <use xlink:href="#"></use>
+              </svg>
+              <p class="photo-block__like-counter"></p>
+            </div>
+          </div>
+        </article>
+
+      </section>
+
+      <section class="textblock">
+        <h2 class="textblock__title"></h2>
+        <p class="textblock__text"></p>
+      </section>
+
+    </div>
+
+    <section class="presentation">
+      <div class="container">
+        <div class="presentation__controls">
+          <svg class="presentation__button">
+            <use xlink:href="#"></use>
+          </svg>
+          <div class="presentation__range">
+            <div class="presentation__scale"></div>
+            <div class="presentation__toggle"></div>
+          </div>
+          <svg class="presentation__button">
+            <use xlink:href="#"></use>
+          </svg>
+          <svg class="presentation__button">
+            <use xlink:href="#"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="page-footer">
+
+    <div class="container">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <b class="page-footer__hastag"></b>
+        </div>
+        <div class="page-footer__social">
+          <ul class="page-footer__social-list social-list">
+            <li class="social-list__item">
+              <a class="social-list__link" href="#">
+                <svg class="social-list__icon">
+                  <use xlink:href="#"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#">
+                <svg class="social-list__icon">
+                  <use xlink:href="#"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="#">
+                <svg class="social-list__icon">
+                  <use xlink:href="#"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright">
+          <p class="page-footer__developed"></p>
+          <svg class="page-footer__academy-icon">
+            <use xlink:href="#"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
