@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = function (grunt) {
   // grunt.loadNpmTasks("grunt-contrib-less");
   // grunt.loadNpmTasks("grunt-browser-sync");
@@ -12,40 +14,43 @@ module.exports = function (grunt) {
           "build/css/style.css": "less/style.less"
         }
       }
-    }
+    },
 
     postcss: {
       options: {
         processors: [
-          require(*autoprefixer *)()
+          require("autoprefixer")()
         ]
       },
+
       style: {
         src: "build/css/*.css"
       }
-    }
+    },
 
     csso: {
       style: {
         options: {
           report: "gzip"
         },
+
         files: {
           "build/css/style.min.css": ["build/css/style.css"]
         }
       }
-    }
+    },
 
     svgstore: {
       options: {
         includeTitleElement: false
       },
+
       sprite: {
         files: {
           "build/img/sprite.svg": ["img/**/icon-*.svg"]
         }
       }
-    }
+    },
 
     posthtml: {
       options: {
@@ -53,6 +58,7 @@ module.exports = function (grunt) {
           require("posthtml-include")()
         ]
       },
+
       html: {
         files: [{
           expand: true,
@@ -60,30 +66,53 @@ module.exports = function (grunt) {
           dest: "build"
         }]
       }
-    }
+    },
+
+    uglify: {
+      build: {
+        files: {
+          "build/js/script.min.js": ["js/*.js"]
+        }
+      }
+    },
 
     watch: {
       html: {
         files: ["*.html"],
         tasks: ["posthtml"]
-      }
+      },
 
       style: {
         files: ["less/**/*.less"],
         tasks: ["less", "postcss", "csso"]
-    }
+      },
+
+      js: {
+        files: ["js/**/*.js"],
+        tasks: ["jsminify"]
+      }
+    },
 
     browserSync: {
       server: {
         bsFiles: {
-          src: ["build/*.html", "build/css/*.css", "build/js/**/*.js"]
+          src: [
+            "build/*.html",
+            "build/css/*.css",
+            "build/js/**/*.js"
+          ]
         }
       },
+
       options: {
         server: "build/",
-        watchTask: true
+        watchTask: true,
+        notify: false,
+        open: true,
+        cors: true,
+        ui: false
       }
-    }
+    },
 
     imagemin: {
       images: {
@@ -92,23 +121,25 @@ module.exports = function (grunt) {
           progressive: true
         }
       },
+
       files: [{
         expand: true,
         src: ["img/**/*.{jpg,png,svg}"]
       }]
-    }
+    },
 
     cwebp: {
       images: {
         options: {
           q: 90
         }
-      }
+      },
+
       files: [{
         expand: true,
         src: ["img/**/*.{jpg,png}"]
       }]
-    }
+    },
 
     copy: {
       build: {
@@ -122,22 +153,26 @@ module.exports = function (grunt) {
           dest: "build"
         }]
       }
-    }
+    },
 
     clean: {
-      build: ["build"]
+      build: ["build"],
+      js: ["build/js/*.min.js"]
     }
   });
+
+  grunt.registerTask("jsminify", ["clean:js", "uglify"]);
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
 
   grunt.registerTask("build", [
-    "clean",
+    "clean:build",
     "copy",
     "less",
     "postcss",
     "csso",
     "svgstore",
-    "posthtml"
+    "posthtml",
+    "jsminify"
   ]);
 };
