@@ -1,0 +1,19 @@
+{
+  "name": "sedona-adaptive",
+  "version": "1.0.0",
+  "description": "HTML Academy project. My development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newborn74/sedona-adaptive.git"
+  },
+  "author": "new_born74",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newborn74/sedona-adaptive/issues"
+  },
+  "homepage": "https://github.com/newborn74/sedona-adaptive#readme"
+}
