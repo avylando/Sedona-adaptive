@@ -5,7 +5,6 @@
 <head>
   <meta charset="utf-8">
   <title>Welcome to Sedona!</title>
-  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -19,32 +18,41 @@
 
     <div class="container">
       <div class="page-header__wrapper">
+        <div class="page-header__menu-wrapper page-header__menu-wrapper--closed page-header__menu-wrapper--nojs">
+          <nav class="page-header__nav page-header__nav--left">
+            <ul class="page-header__menu">
+              <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Главная</a></li>
+              <li class="page-header__menu-item"><a class="page-header__menu-link" href="photo.html">Фото и видео</a></li>
+            </ul>
+          </nav>
+          <nav class="page-header__nav page-header__nav--right">
+            <ul class="page-header__menu">
+              <li class="page-header__menu-item"><a class="page-header__menu-link" href="form.html">Форма отзыва</a></li>
+              <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">HTML Academy</a></li>
+            </ul>
+          </nav>
+        </div>
         <div class="page-header__title">
           <div class="page-header__logo">
-            <svg class="page-header__logo-icon">
-              <use xlink:href=""></use>
-            </svg>
+            <a class="page-header__logo-link" href="index.html">
+              <svg class="page-header__logo-icon page-header__logo-icon--mobile" width="102" height="84">
+                <use xlink:href="#logo-sedona-mobile"></use>
+              </svg>
+              <svg class="page-header__logo-icon page-header__logo-icon--desktop" width="187" height="96">
+                <use xlink:href="#logo-sedona-desktop"></use>
+              </svg>
+            </a>
           </div>
-          <button class="page-header__toggle" type="button"></button>
-          <svg class="page-header__cross-icon" width="22" height="22">
-            <use xlink:href="#icon-cross"></use>
-          </svg>
-          <svg class="page-header__burger-icon" width="23" height="22">
-            <use xlink:href="#icon-menu"></use>
-          </svg>
+          <button class="page-header__toggle page-header__toggle--burger page-header__toggle--nojs" type="button">
+            <svg class="page-header__icon page-header__icon--cross" width="22" height="22">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+            <svg class="page-header__icon page-header__icon--burger" width="23" height="22">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+          </button>
         </div>
-        <nav class="page-header__nav page-header__nav--left">
-          <ul class="page-header__menu">
-            <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Главная</a></li>
-            <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Фото и видео</a></li>
-          </ul>
-        </nav>
-        <nav class="page-header__nav page-header__nav--right">
-          <ul class="page-header__menu">
-            <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">Форма отзыва</a></li>
-            <li class="page-header__menu-item"><a class="page-header__menu-link" href="#">HTML Academy</a></li>
-          </ul>
-        </nav>
+
       </div>
     </div>
 
@@ -53,7 +61,7 @@
   <main>
 
     <section class="head-block head-block--index">
-      <img class="head-block__caption" src="img/.svg">
+      <img class="head-block__caption" src="img/text-sedona-index.svg">
       <div class="container">
         <div class="head-block__greeting">
           <h1 class="head-block__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -62,7 +70,7 @@
       </div>
     </section>
 
-    <section class="reason">
+    <section class="reason reason--first">
       <div class="container">
         <div class="reason__description">
           <h2 class="reason__title">Настоящий городок</h2>
@@ -70,37 +78,50 @@
           <p class="reason__text">Седона — не аттракцион для туристов, там течет своя жизнь</p>
         </div>
       </div>
+      <img class="reason__image" src="img/main-city-mobile@1x.jpg">
     </section>
 
     <section class="advantages">
       <div class="container">
         <div class="advantages__wrapper">
-          <div class="advantages__block">
-            <svg class="advantages__icon" width="75" height="72">
-              <use xlink:href="#icon-house"></use>
-            </svg>
-            <h2 class="advantages__title">Жилье</h2>
-            <p class="advantages__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          <div class="advantages__block advantages__block--house">
+            <div class="advantages__illustration">
+              <svg class="advantages__icon" width="75" height="72">
+                <use xlink:href="#icon-house"></use>
+              </svg>
+            </div>
+            <div class="advantages__description">
+              <h2 class="advantages__title">Жилье</h2>
+              <p class="advantages__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </div>
           </div>
-          <div class="advantages__block">
-            <svg class="advantages__icon" width="76" height="69">
-              <use xlink:href="#icon-burger"></use>
-            </svg>
-            <h2 class="advantages__title">Еда</h2>
-            <p class="advantages__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <div class="advantages__block advantages__block--food">
+            <div class="advantages__illustration">
+              <svg class="advantages__icon" width="76" height="69">
+                <use xlink:href="#icon-burger"></use>
+              </svg>
+            </div>
+            <div class="advantages__description">
+              <h2 class="advantages__title">Еда</h2>
+              <p class="advantages__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </div>
           </div>
-          <div class="advantages__block">
-            <svg class="advantages__icon" width="63" height="75">
-              <use xlink:href="#icon-gift"></use>
-            </svg>
-            <h2 class="advantages__title">Сувениры</h2>
-            <p class="advantages__text">Не только китайского, но и местного производства!</p>
+          <div class="advantages__block advantages__block--souvenirs">
+            <div class="advantages__illustration">
+              <svg class="advantages__icon" width="63" height="75">
+                <use xlink:href="#icon-gift"></use>
+              </svg>
+            </div>
+            <div class="advantages__description">
+              <h2 class="advantages__title">Сувениры</h2>
+              <p class="advantages__text">Не только китайского, но и местного производства!</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="reason">
+    <section class="reason reason--second">
       <div class="container">
         <div class="reason__description">
           <h2 class="reason__title">Там есть Мост Дьявола</h2>
@@ -108,6 +129,7 @@
           <p class="reason__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
       </div>
+      <img class="reason__image" src="img/main-bridge-mobile@1x.jpg">
     </section>
 
     <section class="reasons-list">
@@ -135,9 +157,8 @@
     <section class="searching">
       <div class="container">
         <h2 class="searching__title">Заинтересовались?</h2>
-        <p class="searching__text">Укажите предполагаемые даты поездки,
-          и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="searhing__button button" type="button">Найти гостиницу</button>
+        <p class="searching__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="searching__button button" type="button">Найти гостиницу</button>
       </div>
     </section>
 
@@ -150,42 +171,44 @@
   <footer class="page-footer">
 
     <div class="container">
+
       <div class="page-footer__wrapper">
-        <div class="page-footer__logo">
-          <b class="page-footer__hastag"></b>
+        <div class="page-footer__block page-footer__block--logo">
+          <b class="page-footer__hashtag">#VisitSedona</b>
         </div>
-        <div class="page-footer__social">
+        <div class="page-footer__block page-footer__block--social">
           <ul class="page-footer__social-list social-list">
             <li class="social-list__item">
               <a class="social-list__link" href="#">
-                <svg class="social-list__icon" width="18" height="15">
+                <svg class="social-list__icon social-list__icon--twitter" width="18" height="15">
                   <use xlink:href="#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-list__link" href="#">
-                <svg class="social-list__icon" width="9" height="19">
+                <svg class="social-list__icon social-list__icon--fb" width="9" height="19">
                   <use xlink:href="#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-list__link" href="#">
-                <svg class="social-list__icon" width="20" height="14">
+                <svg class="social-list__icon social-list__icon--youtube" width="20" height="14">
                   <use xlink:href="#icon-youtube"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright">
+        <div class="page-footer__block page-footer__block--copyright">
           <p class="page-footer__developed">Разработано</p>
-          <svg class="page-footer__academy-icon" >
-            <use xlink:href="#"></use>
+          <svg class="page-footer__academy-icon" width="27" height="34">
+            <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </div>
       </div>
+
     </div>
 
   </footer>

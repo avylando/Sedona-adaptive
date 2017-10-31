@@ -1,5 +1,3 @@
-"use strict";
-
 module.exports = function (grunt) {
   // grunt.loadNpmTasks("grunt-contrib-less");
   // grunt.loadNpmTasks("grunt-browser-sync");
@@ -47,7 +45,7 @@ module.exports = function (grunt) {
 
       sprite: {
         files: {
-          "build/img/sprite.svg": ["img/**/icon-*.svg"]
+          "build/img/sprite.svg": ["img/**/icon-*.svg", "img/**/logo-*.svg"]
         }
       }
     },
@@ -71,7 +69,7 @@ module.exports = function (grunt) {
     uglify: {
       build: {
         files: {
-          "build/js/script.min.js": ["js/*.js"]
+          "build/js/toggle.min.js": ["js/toggle.js"]
         }
       }
     },
