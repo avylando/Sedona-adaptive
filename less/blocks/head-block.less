@@ -1,15 +1,19 @@
 .head-block {
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
+  border-bottom: 1px solid @bordercolor;
 
   &--index {
-    min-height: 615px;
-    padding-top: 90px;
+    border-bottom: none;
+  }
+}
 
-    .head-block__greeting {
-      margin-top: 130px;
-    }
+.head-block__illustration {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+
+  &--index {
+    padding-top: 90px;
   }
 }
 
