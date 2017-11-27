@@ -6,15 +6,26 @@
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-
-  &--copyright {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 .page-footer__hashtag {
   .title();
+}
+
+.page-footer__academy-link {
+  display: flex;
+  justify-content: center;
+  color: inherit;
+
+  &:hover .page-footer__academy-icon,
+  &:focus .page-footer__academy-icon {
+    fill: @firmcolor;
+  }
+
+  &:active .page-footer__academy-icon {
+    fill: #000000;
+    opacity: 0.3;
+  }
 }
 
 .page-footer__developed {

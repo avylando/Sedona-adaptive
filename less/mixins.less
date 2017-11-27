@@ -5,7 +5,7 @@
   margin-bottom: 0;
 }
 
-.container-reset {
+.container-reset() {
   margin-left: -20px;
   margin-right: -20px;
 }
@@ -14,4 +14,18 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.firmhover() {
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: @firmhover;
+  }
+
+  &:active {
+    color: @txtwhite-tr;
+    background-color: @firmactive;
+  }
 }
