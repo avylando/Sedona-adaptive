@@ -18,7 +18,7 @@
   text-align: center;
   margin-top: 0;
 
-  .title();
+  .title(18px);
 }
 
 .fields__line {
@@ -83,9 +83,74 @@
 }
 
 .fields__button {
-  width: 100%;
+  width: 280px;
 }
 
 .fields__note {
   display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .fields__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .fields__set {
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+
+    &--radio {
+      order: 1;
+      width: 50%;
+
+      .fields__title {
+        text-align: left;
+      }
+    }
+
+    &--personal {
+      order: 2;
+      width: 50%;
+      padding-left: 55px;
+
+      .fields__title {
+        text-align: left;
+      }
+    }
+
+    &--contacts {
+      order: 3;
+      width: 100%;
+    }
+
+    &--checkboxes {
+      order: 4;
+      width: 100%;
+    }
+
+    &--description {
+      order: 5;
+      width: 100%;
+    }
+  }
+
+  .fields__button-block {
+    order: 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .fields__button {
+    width: 324px;
+  }
+
+  .fields__note {
+    display: block;
+  }
 }

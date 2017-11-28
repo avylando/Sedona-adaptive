@@ -14,10 +14,6 @@
   .list-unstyle();
 }
 
-// .page-header__menu-item {
-
-// }
-
 .page-header__menu-link {
   display: block;
   text-align: center;
@@ -86,3 +82,59 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    position: relative;
+  }
+
+  .page-header__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 102px;
+    margin: 0 auto;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-right: 25px;
+  }
+
+  .page-header__nav {
+    &--left {
+      width: 30.08%;
+    }
+
+    &--right {
+      width: 32.94%;
+    }
+  }
+
+  .page-header__menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .page-header__menu-link {
+    font-size: 14px;
+    line-height: 26px;
+    color: #000000;
+    margin-left: 0;
+    margin-right: 0;
+    border: none;
+    background-color: transparent;
+
+    .menu-hover();
+  }
+
+
+}

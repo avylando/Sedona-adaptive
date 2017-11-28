@@ -1,12 +1,12 @@
 .searching {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .searching__title {
   text-align: center;
   margin-top: 28px;
 
-  .title();
+  .title(18px);
 }
 
 .searching__text {
@@ -16,6 +16,29 @@
 }
 
 .searching__button {
+  display: block;
   width: 280px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .searching {
+    padding-bottom: 58px;
+  }
+
+  .searching__title {
+    margin-top: 54px;
+
+    .title(30px);
+  }
+
+  .searching__text {
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 45px;
+  }
+
+  .searching__button {
+    width: 460px;
+  }
 }

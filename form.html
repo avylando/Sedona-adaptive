@@ -68,10 +68,10 @@
   <main>
 
     <section class="head-block">
-      <div class="head-block__illustration">
-        <img class="head-block__caption" src="img/text-sedona.svg">
-      </div>
       <div class="container">
+        <div class="head-block__illustration">
+          <img class="head-block__caption" src="img/text-sedona.svg">
+        </div>
         <div class="head-block__greeting">
           <h1 class="head-block__title">Оставьте свой отзыв</h1>
           <p class="head-block__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
@@ -84,77 +84,79 @@
       <section class="form">
         <h2 class="visually-hidden">Форма для отзыва</h2>
         <form class="form__fields fields" action="https:\\echo.htmlacademy.ru" method="get">
-          <div class="fields__set fields__set--personal">
-            <h3 class="fields__title">Представьтесь:</h3>
-            <div class="fields__line">
-              <label class="fields__label" for="name">Имя*:</label>
-              <input class="fields__textfield" type="text" id="name" name="name" placeholder="Петр">
+          <div class="fields__wrapper">
+            <div class="fields__set fields__set--personal">
+              <h3 class="fields__title">Представьтесь:</h3>
+              <div class="fields__line">
+                <label class="fields__label" for="name">Имя*:</label>
+                <input class="fields__textfield" type="text" id="name" name="name" placeholder="Петр">
+              </div>
+              <div class="fields__line">
+                <label class="fields__label" for="surname">Фамилия*:</label>
+                <input class="fields__textfield" type="text" id="surname" name="surname" placeholder="Иванов">
+              </div>
+              <div class="fields__line">
+                <label class="fields__label" for="father-name">Отчество:</label>
+                <input class="fields__textfield" type="text" id="father-name" name="father-name" placeholder="Александрович">
+              </div>
             </div>
-            <div class="fields__line">
-              <label class="fields__label" for="surname">Фамилия*:</label>
-              <input class="fields__textfield" type="text" id="surname" name="surname" placeholder="Иванов">
+            <div class="fields__set fields__set--contacts">
+              <h3 class="fields__title">Контактная информация:</h3>
+              <div class="fields__contact-block">
+                <label class="fields__label" for="phone">Контактный телефон*:</label>
+                <input class="fields__textfield" type="text" id="phone" name="phone" placeholder="Введите телефон">
+              </div>
+              <div class="fields__contact-block">
+                <label class="fields__label" for="email">Электронная почта*:</label>
+                <input class="fields__textfield" type="text" id="email" name="email" placeholder="Введите e-mail">
+              </div>
             </div>
-            <div class="fields__line">
-              <label class="fields__label" for="father-name">Отчество:</label>
-              <input class="fields__textfield" type="text" id="father-name" name="father-name" placeholder="Александрович">
+            <div class="fields__set fields__set--radio">
+              <h3 class="fields__title">Ваше общее впечатление:</h3>
+              <ul class="fields__impression impression-list">
+                <li class="impression-list__item">
+                  <input class="impression-list__input" type="radio" id="positive" name="impression" value="positive" checked>
+                  <label class="impression-list__label" for="positive">Скорее положительное</label>
+                </li>
+                <li class="impression-list__item">
+                  <input class="impression-list__input" type="radio" id="negative" name="impression" value="negative">
+                  <label class="impression-list__label" for="negative">Скорее отрицательное</label>
+                </li>
+                <li class="impression-list__item">
+                  <input class="impression-list__input" type="radio" id="neutral" name="impression" value="neutral">
+                  <label class="impression-list__label" for="neutral">Затрудняюсь ответить</label>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div class="fields__set fields__set--contacts">
-            <h3 class="fields__title">Контактная информация:</h3>
-            <div class="fields__contact-block">
-              <label class="fields__label" for="phone">Контактный телефон*:</label>
-              <input class="fields__textfield" type="text" id="phone" name="phone" placeholder="Введите телефон">
+            <div class="fields__set fields__set--checkboxes">
+              <h3 class="fields__title">Посещенные достопримечательности:</h3>
+              <ul class="fields__attraction attraction-list">
+                <li class="attraction-list__item">
+                  <input class="attraction-list__input" type="checkbox" id="devil-bridge" name="devil-bridge" checked>
+                  <label class="attraction-list__label" for="devil-bridge">Мост Дьявола</label>
+                </li>
+                <li class="attraction-list__item">
+                  <input class="attraction-list__input" type="checkbox" id="slide-park" name="slide-park" checked>
+                  <label class="attraction-list__label" for="slide-park">Слайд-парк</label>
+                </li>
+                <li class="attraction-list__item">
+                  <input class="attraction-list__input" type="checkbox" id="mountain" name="mountain">
+                  <label class="attraction-list__label" for="mountain">Гора-Колокол</label>
+                </li>
+                <li class="attraction-list__item">
+                  <input class="attraction-list__input" type="checkbox" id="red-rocks" name="red-rocks" checked>
+                  <label class="attraction-list__label" for="red-rocks">Красные скалы</label>
+                </li>
+              </ul>
             </div>
-            <div class="fields__contact-block">
-              <label class="fields__label" for="email">Электронная почта*:</label>
-              <input class="fields__textfield" type="text" id="email" name="email" placeholder="Введите e-mail">
+            <div class="fields__set fields__set--description">
+              <h3 class="fields__title">Опишите свои эмоции:</h3>
+              <textarea class="fields__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
-          </div>
-          <div class="fields__set fields__set--radio">
-            <h3 class="fields__title">Ваше общее впечатление:</h3>
-            <ul class="fields__impression impression-list">
-              <li class="impression-list__item">
-                <input class="impression-list__input" type="radio" id="positive" name="impression" value="positive" checked>
-                <label class="impression-list__label" for="positive">Скорее положительное</label>
-              </li>
-              <li class="impression-list__item">
-                <input class="impression-list__input" type="radio" id="negative" name="impression" value="negative">
-                <label class="impression-list__label" for="negative">Скорее отрицательное</label>
-              </li>
-              <li class="impression-list__item">
-                <input class="impression-list__input" type="radio" id="neutral" name="impression" value="neutral">
-                <label class="impression-list__label" for="neutral">Затрудняюсь ответить</label>
-              </li>
-            </ul>
-          </div>
-          <div class="fields__set fields__set--checkboxes">
-            <h3 class="fields__title">Посещенные достопримечательности:</h3>
-            <ul class="fields__attraction attraction-list">
-              <li class="attraction-list__item">
-                <input class="attraction-list__input" type="checkbox" id="devil-bridge" name="devil-bridge" checked>
-                <label class="attraction-list__label" for="devil-bridge">Мост Дьявола</label>
-              </li>
-              <li class="attraction-list__item">
-                <input class="attraction-list__input" type="checkbox" id="slide-park" name="slide-park" checked>
-                <label class="attraction-list__label" for="slide-park">Слайд-парк</label>
-              </li>
-              <li class="attraction-list__item">
-                <input class="attraction-list__input" type="checkbox" id="mountain" name="mountain">
-                <label class="attraction-list__label" for="mountain">Гора-Колокол</label>
-              </li>
-              <li class="attraction-list__item">
-                <input class="attraction-list__input" type="checkbox" id="red-rocks" name="red-rocks" checked>
-                <label class="attraction-list__label" for="red-rocks">Красные скалы</label>
-              </li>
-            </ul>
-          </div>
-          <div class="fields__set fields__set--description">
-            <h3 class="fields__title">Опишите свои эмоции:</h3>
-            <textarea class="fields__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
-          </div>
-          <div class="fields__button-block">
-            <button class="fields__button button">Отправить отзыв</button>
-            <p class="fields__note">* - Обязательные поля</p>
+            <div class="fields__button-block">
+              <button class="fields__button button">Отправить отзыв</button>
+              <p class="fields__note">* - Обязательные поля</p>
+            </div>
           </div>
         </form>
       </section>

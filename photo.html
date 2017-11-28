@@ -68,10 +68,10 @@
   <main>
 
     <section class="head-block">
-      <div class="head-block__illustration">
-        <img class="head-block__caption" src="img/text-sedona.svg">
-      </div>
       <div class="container">
+        <div class="head-block__illustration">
+          <img class="head-block__caption" src="img/text-sedona.svg">
+        </div>
         <div class="head-block__greeting">
           <h1 class="head-block__title">Фото и видео</h1>
           <p class="head-block__text">Не можете решиться на путешествия из-за курса? фотографии помогут вам забыть о политике и экономике.</p>
@@ -84,14 +84,18 @@
       <section class="album">
 
         <article class="photo-block photo-block--main">
-          <img class="photo-block__image" src="img/photo-sunset-mobile@1x.jpg">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@1x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@1x.jpg 2x">
+            <img class="photo-block__image" src="img/photo-sunset-mobile@1x.jpg">
+          </picture>
           <div class="photo-block__subtitle">
-            <div class="photo-block__decsription">
+            <div class="photo-block__description">
               <h2 class="photo-block__title">Неродные просторы</h2>
               <p class="photo-block__text">Автор фото: Борис</p>
             </div>
             <div class="photo-block__likes">
-              <svg class="photo-block__like-icon" width="22" height="20">
+              <svg class="photo-block__like-icon" width="22" height="20" tabindex="0">
                 <use xlink:href="#icon-like"></use>
               </svg>
               <p class="photo-block__like-counter">1350</p>
@@ -100,14 +104,18 @@
         </article>
 
         <article class="photo-block">
-          <img class="photo-block__image" src="img/photo-cactus-mobile@1x.jpg">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@1x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@1x.jpg 2x">
+            <img class="photo-block__image" src="img/photo-cactus-mobile@1x.jpg">
+          </picture>
           <div class="photo-block__subtitle">
-            <div class="photo-block__decsription">
+            <div class="photo-block__description">
               <h2 class="photo-block__title">Местная растительность</h2>
               <p class="photo-block__text">Автор фото: Сергей</p>
             </div>
             <div class="photo-block__likes">
-              <svg class="photo-block__like-icon" width="22" height="20">
+              <svg class="photo-block__like-icon" width="22" height="20" tabindex="0">
                 <use xlink:href="#icon-like"></use>
               </svg>
               <p class="photo-block__like-counter">143</p>
@@ -116,14 +124,18 @@
         </article>
 
         <article class="photo-block">
-          <img class="photo-block__image" src="img/photo-roads-mobile@1x.jpg">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@1x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@1x.jpg 2x">
+            <img class="photo-block__image" src="img/photo-roads-mobile@1x.jpg">
+          </picture>
           <div class="photo-block__subtitle">
-            <div class="photo-block__decsription">
+            <div class="photo-block__description">
               <h2 class="photo-block__title">Дорога на север</h2>
               <p class="photo-block__text">Автор фото: Петр</p>
             </div>
             <div class="photo-block__likes">
-              <svg class="photo-block__like-icon" width="22" height="20">
+              <svg class="photo-block__like-icon" width="22" height="20" tabindex="0">
                 <use xlink:href="#icon-like"></use>
               </svg>
               <p class="photo-block__like-counter">96</p>
@@ -132,14 +144,18 @@
         </article>
 
         <article class="photo-block">
-          <img class="photo-block__image" src="img/photo-bridge-mobile@1x.jpg">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@1x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@1x.jpg 2x">
+            <img class="photo-block__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg, 2x">
+          </picture>
           <div class="photo-block__subtitle">
-            <div class="photo-block__decsription">
+            <div class="photo-block__description">
               <h2 class="photo-block__title">Мост Дьявола</h2>
               <p class="photo-block__text">Автор фото: Антон</p>
             </div>
             <div class="photo-block__likes">
-              <svg class="photo-block__like-icon" width="22" height="20">
+              <svg class="photo-block__like-icon" width="22" height="20" tabindex="0">
                 <use xlink:href="#icon-like"></use>
               </svg>
               <p class="photo-block__like-counter">254</p>
@@ -160,20 +176,20 @@
       <div class="container">
         <div class="presentation__wrapper">
           <div class="presentation__controls">
-            <svg class="presentation__button presentation__button--replay" width="16" height="20">
+            <svg class="presentation__button presentation__button--replay" width="16" height="20" tabindex="0">
               <use xlink:href="#icon-video-replay"></use>
             </svg>
             <div class="presentation__range">
               <div class="presentation__range-wrapper">
                 <div class="presentation__scale">
-                  <div class="presentation__toggle"></div>
+                  <div class="presentation__toggle" tabindex="0"></div>
                 </div>
               </div>
             </div>
-            <svg class="presentation__button presentation__button--subtitles" width="32" height="20">
+            <svg class="presentation__button presentation__button--subtitles" width="32" height="20" tabindex="0">
               <use xlink:href="#icon-video-subtitles"></use>
             </svg>
-            <svg class="presentation__button presentation__button--fullscreen" width="20" height="20">
+            <svg class="presentation__button presentation__button--fullscreen" width="20" height="20" tabindex="0">
               <use xlink:href="#icon-video-fullscreen"></use>
             </svg>
           </div>

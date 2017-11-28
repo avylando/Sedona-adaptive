@@ -69,10 +69,10 @@
   <main>
 
     <section class="head-block head-block--index">
-      <div class="head-block__illustration head-block__illustration--index">
-        <img class="head-block__caption" src="img/text-sedona-index.svg">
-      </div>
       <div class="container">
+        <div class="head-block__illustration head-block__illustration--index">
+          <img class="head-block__caption" src="img/text-sedona-index.svg">
+        </div>
         <div class="head-block__greeting">
           <h1 class="head-block__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p class="head-block__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -80,15 +80,25 @@
       </div>
     </section>
 
-    <section class="reason reason--first">
+    <section class="reason reason--city">
       <div class="container">
-        <div class="reason__description">
-          <h2 class="reason__title">Настоящий городок</h2>
-          <p class="reason__number">— №1 —</p>
-          <p class="reason__text">Седона — не аттракцион для туристов, там течет своя жизнь</p>
+        <div class="reason__wrapper">
+          <div class="reason__description">
+            <h2 class="reason__title">Настоящий городок</h2>
+            <p class="reason__number">— №1 —</p>
+            <p class="reason__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          </div>
+          <div class="reason__canvas">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x" width="800"
+                height="400">
+              <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x" width="512"
+                height="256">
+              <img class="reason__image" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg, 2x">
+            </picture>
+          </div>
         </div>
       </div>
-      <img class="reason__image" src="img/main-city-mobile@1x.jpg">
     </section>
 
     <section class="advantages">
@@ -131,15 +141,24 @@
       </div>
     </section>
 
-    <section class="reason reason--second">
+    <section class="reason reason--bridge">
       <div class="container">
-        <div class="reason__description">
-          <h2 class="reason__title">Там есть Мост Дьявола</h2>
-          <p class="reason__number">— №2 —</p>
-          <p class="reason__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        <div class="reason__wrapper">
+          <div class="reason__description">
+            <h2 class="reason__title">Там есть Мост Дьявола</h2>
+            <p class="reason__number">— №2 —</p>
+            <p class="reason__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          </div>
+          <div class="reason__canvas">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x" width="800"
+                height="400">
+              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x" width="512" height="256">
+              <img class="reason__image" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg, 2x">
+            </picture>
+          </div>
         </div>
       </div>
-      <img class="reason__image" src="img/main-bridge-mobile@1x.jpg">
     </section>
 
     <section class="reasons-list">
@@ -148,17 +167,17 @@
           <div class="reasons-list__description">
             <h2 class="reasons-list__title">Небольшая площадь</h2>
             <p class="reasons-list__number">— №3 —</p>
-            <p class="reasons-list__text">Все достопримечательности находятся очень близко</p>
+            <p class="reasons-list__text">Все интересные места <br>находятся очень близко</p>
           </div>
           <div class="reasons-list__description">
             <h2 class="reasons-list__title">Красивая дорога</h2>
             <p class="reasons-list__number">— №4 —</p>
-            <p class="reasons-list__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="reasons-list__text">Ехать в Седону из <br>Лас-Вегаса совсем не скучно!</p>
           </div>
           <div class="reasons-list__description">
             <h2 class="reasons-list__title">Мало туристов</h2>
             <p class="reasons-list__number">— №5 —</p>
-            <p class="reasons-list__text">Большинство едет в Гранд-Каньон и толпится там</p>
+            <p class="reasons-list__text">Большинство едет в <br>Гранд-Каньон и толпится там</p>
           </div>
         </div>
       </div>
@@ -167,7 +186,7 @@
     <section class="searching">
       <div class="container">
         <h2 class="searching__title">Заинтересовались?</h2>
-        <p class="searching__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <p class="searching__text">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="searching__button button" type="button">Найти гостиницу</button>
       </div>
     </section>

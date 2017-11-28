@@ -2,6 +2,7 @@
   padding-top: 201px;
   background-image: url("../img/video-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 100% 75.5%;
 }
 
 .presentation__wrapper {
@@ -10,6 +11,8 @@
 
 .presentation__controls {
   display: flex;
+  align-items: center;
+  height: 69px;
   padding-left: 23px;
   padding-right: 23px;
   background-color: hsl(0, 0%, 95%);
@@ -42,12 +45,16 @@
   height: 9px;
   border-radius: 50%;
   background-color: hsl(0, 0%, 100%);
+  outline: none;
+  cursor: pointer;
+
+  .toggle-hover()
 }
 
 .presentation__button {
-  margin-top: 23px;
-  margin-bottom: 23px;
   fill: @controlscolor;
+  outline: none;
+  cursor: pointer;
 
   &--replay {
     margin-right: auto;
@@ -55,5 +62,36 @@
 
   &--subtitles {
     margin-right: 30px;
+  }
+
+  .controls-hover()
+}
+
+@media (min-width: 768px) {
+  .presentation {
+    padding-top: 421px;
+    margin-left: 60px;
+    margin-right: 60px;
+    background-image: url("../img/video-tablet@1x.jpg");
+    background-size: 100% 100%;
+  }
+
+  .presentation__wrapper {
+    background-color: hsla(0, 0%, 0%, 0.5);
+  }
+
+  .presentation__controls {
+    padding-left: 34px;
+    padding-right: 40px;
+    background-color: transparent;
+  }
+
+  .presentation__range {
+    position: static;
+    background-color: transparent;
+  }
+
+  .presentation__button {
+    fill: #ffffff;
   }
 }

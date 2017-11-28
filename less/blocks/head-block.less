@@ -12,6 +12,8 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
 
+  .container-reset();
+
   &--index {
     padding-top: 90px;
   }
@@ -19,16 +21,60 @@
 
 .head-block__caption {
   display: block;
-  width: 87.5%;
+  width: 280px;
   margin: 0 auto;
 }
 
 .head-block__title {
   text-align: center;
 
-  .title();
+  .title(18px);
 }
 
 .head-block__text {
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .head-block {
+    padding-bottom: 50px;
+    border-bottom: none;
+
+    &--index {
+      .head-block__title {
+        .title(21px);
+      }
+    }
+  }
+
+  .head-block__illustration {
+    padding-top: 90px;
+    padding-bottom: 125px;
+    margin-left: 0;
+    margin-right: 0;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-size: cover;
+
+    &--index {
+      padding-bottom: 70px;
+    }
+  }
+
+  .head-block__caption {
+    width: 462px;
+  }
+
+  .head-block__title {
+    width: 58.59%;
+    margin: 0 auto;
+    margin-top: 48px;
+    margin-bottom: 35px;
+
+    .title(30px);
+  }
+
+  .head-block__text {
+    width: 57%;
+    margin: 0 auto;
+  }
 }

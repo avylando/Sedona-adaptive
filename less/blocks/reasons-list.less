@@ -4,6 +4,11 @@
 
 .reasons-list__description {
   border-bottom: 1px solid hsl(0, 0%, 86%);
+  padding-bottom: 45px;
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .reasons-list__title {
@@ -11,7 +16,7 @@
   padding-top: 27px;
   margin-top: 0;
 
-  .title();
+  .title(18px);
 }
 
 .reasons-list__number {
@@ -20,5 +25,28 @@
 
 .reasons-list__text {
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .reasons-list__wrapper {
+    display: flex;
+  }
+
+  .reasons-list__description {
+    width: 33.33%;
+    border-bottom: none;
+  }
+
+  .reasons-list__title {
+    width: 50%;
+    margin: 0 auto;
+
+    .title(21px);
+  }
+
+  .reasons-list__text {
+    width: 65%;
+    margin: 0 auto;
+  }
 }

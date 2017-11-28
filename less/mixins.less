@@ -10,8 +10,8 @@
   margin-right: -20px;
 }
 
-.title() {
-  font-size: 18px;
+.title(@font-size) {
+  font-size: @font-size;
   line-height: 26px;
   font-weight: 700;
 }
@@ -27,5 +27,53 @@
   &:active {
     color: @txtwhite-tr;
     background-color: @firmactive;
+  }
+}
+
+.checkbox-hover() {
+  &:hover::before,
+  &:focus::before {
+    background-color: @greyhover;
+  }
+
+  &:active::before {
+    background-color: @greyactive;
+    opacity: 0.3;
+  }
+}
+
+.controls-hover() {
+  &:hover,
+  &:focus {
+    fill: @controlshover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.toggle-hover() {
+  &:hover,
+  &:focus {
+    background-color: @controlshover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.menu-hover() {
+  &:hover,
+  &:focus {
+    color: @firmcolor;
+    background-color: transparent;
+  }
+
+  &:active {
+    color: #000000;
+    background-color: transparent;
+    opacity: 0.3;
   }
 }

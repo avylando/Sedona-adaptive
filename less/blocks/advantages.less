@@ -1,5 +1,5 @@
 .advantages {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .advantages__wrapper {
@@ -30,6 +30,7 @@
 }
 
 .advantages__icon {
+  display: block;
   fill: @firmcolor;
   width: 100%;
 }
@@ -41,9 +42,60 @@
 .advantages__title {
   margin-top: 25px;
 
-  .title();
+  .title(18px);
 }
 
 .advantages__text {
   margin-bottom: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    padding-top: 60px;
+    padding-bottom: 65px;
+  }
+
+  .advantages__wrapper {
+    flex-direction: row;
+  }
+
+  .advantages__block {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 33.33%;
+
+    &--house {
+      order: 1;
+    }
+
+    &--food {
+      order: 2;
+    }
+
+    &--souvenirs {
+      order: 3;
+
+      .advantages__icon {
+        margin-top: -5px;
+      }
+    }
+  }
+
+  .advantages__illustration {
+    width: auto;
+  }
+
+  .advantages__description {
+    text-align: center;
+  }
+
+  .advantages__title {
+    .title(21px);
+  }
+
+  .advantages__text {
+    width: 80%;
+    margin: 0 auto;
+  }
 }

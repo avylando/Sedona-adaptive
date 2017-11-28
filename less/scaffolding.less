@@ -30,15 +30,20 @@ body {
   line-height: 21px;
   color: @fontcolor;
   text-transform: uppercase;
-  width: 320px;
-  margin: 0 auto;
 }
 
 .container {
-  width: 320px;
+  min-width: 320px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 img {
@@ -75,4 +80,8 @@ a {
   cursor: pointer;
 
   .firmhover();
+
+  &:disabled {
+    background-color: @greyhover;
+  }
 }
