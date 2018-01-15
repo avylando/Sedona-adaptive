@@ -6,6 +6,8 @@
   <meta charset="utf-8">
   <title>Welcome to Sedona!</title>
   <link href="css/style.css" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+  </script>
 </head>
 
 <body>
@@ -248,6 +250,28 @@
     </div>
 
   </footer>
+
+  <script type="text/javascript">
+    ymaps.ready(init);
+    var myMap;
+    var myPin;
+
+    function init() {
+      myMap = new ymaps.Map("map", {
+        center: [34.868167, -111.760174],
+        zoom: 8
+      });
+
+      myPin = new ymaps.Placemark([34.868167, -111.760174], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/icon-map-marker.svg',
+        iconImageSize: [40, 40],
+        iconImageOffset: [-20, -20]
+      });
+
+      myMap.geoObjects.add(myPin);
+    }
+  </script>
 
 </body>
 

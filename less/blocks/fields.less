@@ -87,7 +87,9 @@
 }
 
 .fields__button {
+  display: block;
   width: 280px;
+  margin: 0 auto;
 }
 
 .fields__note {
@@ -110,7 +112,7 @@
 
     &--radio {
       order: 1;
-      width: 50%;
+      width: 45%;
 
       .fields__title {
         text-align: left;
@@ -119,7 +121,7 @@
 
     &--personal {
       order: 2;
-      width: 50%;
+      width: 55%;
       padding-left: 55px;
 
       .fields__title {
@@ -213,9 +215,22 @@
 
   .fields__button {
     width: 324px;
+    margin: 0;
   }
 
   .fields__note {
     display: block;
   }
 }
+
+// @media (min-width: @desktop-width) {
+//   .fields__set {
+//     &--radio {
+//       width: 45%;
+//     }
+
+//     &--personal {
+//       width: 55%;
+//     }
+//   }
+// }
